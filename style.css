@@ -1,6 +1,7 @@
 /* styles.css */
 .navbar {
     background-color: #6f2cf5 !important;
+    
 }
 
 /* Hover effects */
@@ -13,6 +14,8 @@
 /* Navbar customization */
 .navbar-brand {
     font-weight: bold;
+    font-size: 2em;
+    
 }
 
 .nav-link {
@@ -28,7 +31,9 @@
 #footer{
     /* background-color: #f8f9fa; */
     background-color: #6f2cf5 !important;
+    color: white;
 }
+
 
 /* Responsive adjustments */
 @media (max-width: 767.98px) {
@@ -72,3 +77,9 @@ footer a:hover {
     color: #0056b3;
     text-decoration: underline;
 }
+
+/*   index.html */
+#img:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s;
+  }
