@@ -1,4 +1,7 @@
 /* styles.css */
+.navbar {
+    background-color: #6f2cf5 !important;
+}
 
 /* Hover effects */
 .card:hover {
@@ -22,8 +25,9 @@
 }
 
 /* Footer */
-footer {
-    background-color: #f8f9fa;
+#footer{
+    /* background-color: #f8f9fa; */
+    background-color: #6f2cf5 !important;
 }
 
 /* Responsive adjustments */
@@ -35,4 +39,36 @@ footer {
     .jumbotron p {
         font-size: 16px;
     }
+}
+
+/* Custom styles for the Course 1 Page */
+.container {
+    max-width: 1200px;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.card-title {
+    font-size: 1.25rem;
+}
+
+.embed-responsive {
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #f8f9fa;
+    color: #6c757d;
+}
+
+footer a {
+    color: #007bff;
+}
+
+footer a:hover {
+    color: #0056b3;
+    text-decoration: underline;
 }
