@@ -1,0 +1,89 @@
+/* Add this to your style.css file */
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Add this to your core-java.css or style.css file */
+
+.btn-download {
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 20px;
+    padding: 10px 15px;
+    text-align: center;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-download i {
+    margin-right: 5px;
+    font-size: 18px;
+}
+
+.btn-download:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.btn-download:focus, .btn-download:active {
+    outline: none;
+    box-shadow: none;
+}
+
+/* Add this to your style.css file */
+
+.embed-responsive {
+    position: relative;
+    overflow: hidden;
+}
+
+.embed-responsive .play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.play-button i {
+    color: #fff;
+    font-size: 24px;
+}
+/* Add this to your style.css file */
+
+h2, h3 {
+    color: #333;
+}
+
+.container {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #343a40;
+    color: #fff;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
