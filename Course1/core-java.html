@@ -4,16 +4,179 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Core Java - LMS</title>
+    <title>Java Full Stack Course</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        .header {
+            background: linear-gradient(45deg, #343a40, #007bff);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-weight: 700;
+            font-size: 3rem;
+            margin: 0;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        .header p {
+            font-size: 1.25rem;
+            margin: 10px 0 0;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .footer {
+            background-color: #343a40;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer p {
+            font-size: 1rem;
+            margin: 0;
+        }
+
+        .footer a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            color: #007bff;
+            font-weight: bold;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            width: 0;
+            height: 3px;
+            background-color: #007bff;
+            position: absolute;
+            left: 50%;
+            bottom: -10px;
+            transform: translateX(-50%);
+            transition: width 0.4s ease-in-out;
+        }
+
+        h2:hover::after {
+            width: 280px;
+        }
+
+        .card-custom {
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        .card-custom:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-body {
+            padding: 30px 20px;
+        }
+
+        .card-title {
+            font-weight: bold;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #343a40;
+            transition: color 0.3s ease;
+        }
+
+        .card-title:hover {
+            color: #007bff;
+        }
+
+        .card-text {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .download-icon {
+            font-size: 1.5rem;
+            /* color: #007bff; */
+            /* margin-bottom: 15px; */
+            transition: color 0.3s ease;
+        }
+
+        .download-icon:hover {
+            color: #ec2ccf;
+        }
+
+        .embed-responsive {
+            margin-top: 15px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.5rem;
+            }
+
+            .header p {
+                font-size: 1rem;
+            }
+        }
+    </style>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="./core-java.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
 </head>
 
 <body>
 
     <!-- Navbar -->
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">LMS</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -25,7 +188,11 @@
                 <li class="nav-item">
                     <a class="nav-link" href="../index.html">Home</a>
                 </li>
+
+                <li class="nav-item">
+
                 <li class="nav-item active">
+
                     <a class="nav-link" href="../courses.html">Courses</a>
                 </li>
                 <li class="nav-item">
@@ -38,6 +205,83 @@
                     <a class="nav-link" href="../studentprofile.html">Student Profile</a>
                 </li>
             </ul>
+
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="header">
+        <h1>Java Full Stack Development Course</h1>
+        <p>Master Java Full Stack Development with our comprehensive course.</p>
+    </header>
+
+    <!-- Core Java Concepts Section -->
+    <div class="container">
+        <h2>Core Java Concepts</h2>
+        <div class="row">
+            <!-- Card 1: OOP Concepts -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card card-custom">
+                    <div class="card-body">
+                        <a href="./Unit - 001_ ProjectJourney.pdf" download class="btn btn-primary">
+                            <i class="fas fa-file-pdf download-icon"></i>
+                        </a>
+                        <h5 class="card-title">OOP Concepts</h5>
+                        <p class="card-text">Understand the core Object-Oriented Programming concepts in Java.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2: Exception Handling -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card card-custom">
+                    <div class="card-body">
+                        <a href="./Unit - 001_ ProjectJourney.pdf" download class="btn btn-primary">
+                            <i class="fas fa-file-pdf download-icon"></i>
+                        </a>
+                        <h5 class="card-title">Exception Handling</h5>
+                        <p class="card-text">Learn how to handle exceptions effectively in Java.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3: Java Collections -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card card-custom">
+                    <div class="card-body">
+                        <a href="./Unit - 001_ ProjectJourney.pdf" download class="btn btn-primary">
+                            <i class="fas fa-file-pdf download-icon"></i>
+                        </a>
+                        <h5 class="card-title">Java Collections</h5>
+                        <p class="card-text">Explore Java's powerful Collection framework for managing groups of objects.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Videos Section -->
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item"
+                        src="https://www.youtube.com/embed/BGTx91t8q50?si=OBIgMS17pHamvfUm"
+                        title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item"
+                        src="https://www.youtube.com/embed/BGTx91t8q50?si=OBIgMS17pHamvfUm"
+                        title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item"
+                        src="https://www.youtube.com/embed/BGTx91t8q50?si=OBIgMS17pHamvfUm"
+                        title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                </div>
+
         </div>
     </nav>
 
@@ -122,9 +366,17 @@
                     </div>
                 </div>
                 <p class="text-center mt-2">Object-Oriented Programming Video</p>
+              
             </div>
         </div>
     </div>
+      
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Java Full Stack Course | All Rights Reserved</p>
+        <a href="(link unavailable)" class="text-white">Visit our website</a>
+    </footer>
+
 
     
     <!-- Footer -->
@@ -137,6 +389,7 @@
     </footer>
 
     <!-- Bootstrap JS and dependencies -->
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.6/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
