@@ -1,89 +1,160 @@
-/* Add this to your style.css file */
 
-.card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Add this to your core-java.css or style.css file */
-
-.btn-download {
-    background-color: #007bff;
-    color: #fff;
-    border-radius: 20px;
-    padding: 10px 15px;
-    text-align: center;
-    font-size: 16px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.btn-download i {
-    margin-right: 5px;
-    font-size: 18px;
-}
-
-.btn-download:hover {
-    background-color: #0056b3;
-    transform: scale(1.05);
-}
-
-.btn-download:focus, .btn-download:active {
-    outline: none;
-    box-shadow: none;
-}
-
-/* Add this to your style.css file */
-
-.embed-responsive {
-    position: relative;
-    overflow: hidden;
-}
-
-.embed-responsive .play-button {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-}
-
-.play-button i {
-    color: #fff;
-    font-size: 24px;
-}
-/* Add this to your style.css file */
-
-h2, h3 {
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
     color: #333;
 }
 
-.container {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.header {
+    background: linear-gradient(45deg, #343a40, #007bff);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
 }
 
-footer {
+.header h1 {
+    font-weight: 700;
+    font-size: 3rem;
+    margin: 0;
+    animation: fadeInDown 1s ease-out;
+}
+
+.header p {
+    font-size: 1.25rem;
+    margin: 10px 0 0;
+    animation: fadeInUp 1s ease-out;
+}
+
+.footer {
     background-color: #343a40;
-    color: #fff;
+    color: white;
+    padding: 20px;
+    text-align: center;
 }
 
-footer a {
-    color: #fff;
+.footer p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.footer a {
     text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
 }
 
-footer a:hover {
-    text-decoration: underline;
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #007bff;
+    font-weight: bold;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: #007bff;
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    transition: width 0.4s ease-in-out;
+}
+
+h2:hover::after {
+    width: 280px;
+}
+
+.card-custom {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.card-custom:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
+    padding: 30px 20px;
+}
+
+.card-title {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #343a40;
+    transition: color 0.3s ease;
+}
+
+.card-title:hover {
+    color: #007bff;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.download-icon {
+    font-size: 1.5rem;
+    /* color: #007bff; */
+    /* margin-bottom: 15px; */
+    /* transition: color 0.3s ease; */
+    transition: color 0.3s ease, transform 0.4s ease;
+}
+
+.download-icon:hover {
+    color: #dee3e8;
+    transform: scale(1.4);
+}
+
+.embed-responsive {
+    margin-top: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2.5rem;
+    }
+
+    .header p {
+        font-size: 1rem;
+    }
 }

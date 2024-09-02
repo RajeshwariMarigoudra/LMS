@@ -7,6 +7,58 @@
     <title>Course 1 - LMS</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Custom styles for the alert box */
+        #enrollAlert {
+            display: none;
+            background: linear-gradient(45deg, #e9f7ef, #c3e6cb); /* Gradient background */
+            border: 2px solid #28a745; /* Green border */
+            border-radius: 15px; /* More rounded corners */
+            padding: 20px;
+            font-size: 1.2rem;
+            font-weight: 500;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1050; /* High z-index to appear above other elements */
+            width: 350px;
+            animation: fadeIn 0.8s ease-in-out;
+            transition: all 0.3s ease; /* Smooth transition */
+        }
+
+        /* Icon style */
+        #enrollAlert .icon {
+            font-size: 2.5rem; /* Larger icon */
+            color: #28a745;
+            margin-right: 15px;
+            vertical-align: middle;
+        }
+
+        /* Animation for fade-in effect */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Custom close button */
+        #enrollAlert .close {
+            color: #28a745;
+            opacity: 0.8;
+            font-size: 1.2rem;
+            transition: opacity 0.3s;
+        }
+
+        #enrollAlert .close:hover {
+            opacity: 1;
+        }
+    </style>
 </head>
 
 <body>
@@ -38,6 +90,17 @@
             </ul>
         </div>
     </nav>
+
+    <!-- Alert Message -->
+    <div class="container mt-4">
+        <div id="enrollAlert" class="alert alert-success alert-dismissible fade show" role="alert">
+            <i class="icon">&#10004;</i> <!-- Checkmark icon -->
+            You have successfully enrolled in the course!
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    </div>
 
     <!-- Course Detail Section -->
     <div class="container mt-5">
@@ -74,7 +137,7 @@
                         <p><strong>Duration:</strong> 10 weeks</p>
                         <p><strong>Level:</strong> Beginner</p>
                         <p><strong>Instructor:</strong> John Doe</p>
-                        <a href="./Course1/java-full-stack.html" class="btn btn-primary btn-block">Enroll Now</a>
+                        <button id="enrollBtn" class="btn btn-primary btn-block">Enroll Now</button>
                     </div>
                 </div>
             </div>
@@ -92,6 +155,19 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.6/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <!-- Custom Script for Enroll Button -->
+    <script>
+        document.getElementById('enrollBtn').addEventListener('click', function() {
+            var alertBox = document.getElementById('enrollAlert');
+            alertBox.style.display = 'block';  // Show the alert message
+
+            setTimeout(function() {
+                alertBox.style.display = 'none'; // Hide the alert after 5 seconds
+                window.location.href = "./course1/core-java.html"; // Redirect to core-java.html
+            }, 1000);
+        });
+    </script>
 </body>
 
 </html>
